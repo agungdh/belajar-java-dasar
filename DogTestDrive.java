@@ -2,13 +2,17 @@ class Dog {
 	int size;
 	String name;
 
-	void bark() {
-		if (size > 60) {
-			System.out.println("Woof! Woof!");
-		} else if (size > 14) {
-			System.out.println("Ruuf! Ruuf!");
-		} else {
-			System.out.println("Yip! Yip!");
+	void bark(int numOfBarks) {
+		while (numOfBarks > 0) {
+			if (size > 60) {
+				System.out.println("Woof! Woof!");
+			} else if (size > 14) {
+				System.out.println("Ruuf! Ruuf!");
+			} else {
+				System.out.println("Yip! Yip!");
+			}
+
+			numOfBarks = numOfBarks - 1;
 		}
 	}
 }
@@ -22,8 +26,8 @@ class DogTestDrive {
 		Dog three = new Dog();
 		three.size = 35;
 
-		one.bark();
-		two.bark();
-		three.bark();
+		one.bark(2);
+		two.bark(2);
+		three.bark(2);
 	}
 }
