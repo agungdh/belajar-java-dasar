@@ -11,4 +11,8 @@ public class Duck {
 
 		System.out.println("Size is " + this.size);
 	}
+
+	public Duck() {
+		System.out.println("Quack");
+	}
 }
